@@ -5,16 +5,41 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-    <title>George Mwangi | Developer Portfolio</title>
+    <title>George Mwangi | Python Developer</title>
 
 
     <style>
 
-        /* =========================
+        /* =================================
+           COLOR VARIABLES
+        ================================= */
+
+        :root {
+
+            --primary: #2563eb;
+            --secondary: #7c3aed;
+            --dark: #0f172a;
+            --dark2: #1e293b;
+
+            --light: #f8fafc;
+            --white: #ffffff;
+
+            --text: #334155;
+            --muted: #64748b;
+
+            --border: #e2e8f0;
+
+            --success: #16a34a;
+
+        }
+
+
+        /* =================================
            GENERAL
-        ========================= */
+        ================================= */
 
         * {
             margin: 0;
@@ -22,366 +47,936 @@
             box-sizing: border-box;
         }
 
+
         html {
             scroll-behavior: smooth;
         }
 
+
         body {
-            font-family: Arial, sans-serif;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
             line-height: 1.6;
-            background: #f4f6f8;
-            color: #222;
+
+            background: var(--light);
+
+            color: var(--text);
+
         }
 
 
-        /* =========================
+        a {
+            text-decoration: none;
+        }
+
+
+        /* =================================
            NAVIGATION
-        ========================= */
+        ================================= */
 
         header {
-            background: #111;
-            color: white;
 
             position: sticky;
+
             top: 0;
 
             z-index: 1000;
+
+            background:
+                rgba(15, 23, 42, 0.95);
+
+            backdrop-filter:
+                blur(10px);
+
         }
+
 
         nav {
-            max-width: 1100px;
+
+            max-width: 1150px;
+
             margin: auto;
 
-            padding: 20px;
+            padding:
+                18px 20px;
 
             display: flex;
-            justify-content: space-between;
+
+            justify-content:
+                space-between;
+
             align-items: center;
-        }
 
-        nav h2 {
-            color: white;
-        }
-
-        nav ul {
-            list-style: none;
-
-            display: flex;
-
-            gap: 25px;
-        }
-
-        nav a {
-            color: white;
-
-            text-decoration: none;
-
-            transition: 0.3s;
-        }
-
-        nav a:hover {
-            color: #4da6ff;
         }
 
 
-        /* =========================
-           MAIN
-        ========================= */
-
-        main {
-            max-width: 1100px;
-
-            margin: auto;
-        }
-
-
-        /* =========================
-           HOME
-        ========================= */
-
-        #home {
-            min-height: 90vh;
-
-            padding: 40px 20px;
-
-            display: flex;
-
-            flex-direction: column;
-
-            justify-content: center;
-        }
-
-        #home h1 {
-            font-size: 55px;
-
-            margin-bottom: 10px;
-        }
-
-        #home h2 {
-            font-size: 28px;
-
-            margin-bottom: 20px;
-        }
-
-        #home p {
-            max-width: 700px;
-
-            font-size: 18px;
-
-            margin-bottom: 30px;
-        }
-
-        .button {
-            display: inline-block;
-
-            background: #111;
+        .logo {
 
             color: white;
-
-            padding: 13px 25px;
-
-            text-decoration: none;
-
-            border-radius: 6px;
-
-            transition: 0.3s;
-        }
-
-        .button:hover {
-            background: #333;
-        }
-
-
-        /* =========================
-           SECTIONS
-        ========================= */
-
-        section {
-            padding: 80px 20px;
-        }
-
-        section h2 {
-            font-size: 35px;
-
-            margin-bottom: 30px;
-        }
-
-
-        /* =========================
-           ABOUT
-        ========================= */
-
-        #about p {
-            max-width: 800px;
-
-            margin-bottom: 15px;
-        }
-
-
-        /* =========================
-           SKILLS
-        ========================= */
-
-        .skills-container {
-
-            display: grid;
-
-            grid-template-columns:
-                repeat(3, 1fr);
-
-            gap: 25px;
-        }
-
-
-        .skill {
-
-            background: white;
-
-            padding: 30px;
-
-            border-radius: 12px;
-
-            box-shadow:
-                0 3px 12px rgba(0,0,0,0.08);
-
-            transition: 0.3s;
-        }
-
-
-        .skill:hover {
-
-            transform: translateY(-5px);
-
-            box-shadow:
-                0 8px 20px rgba(0,0,0,0.12);
-        }
-
-
-        .skill h3 {
 
             font-size: 22px;
 
-            margin-bottom: 20px;
+            font-weight: bold;
+
         }
 
 
-        .skill ul {
+        .logo span {
+
+            color:
+                #60a5fa;
+
+        }
+
+
+        nav ul {
 
             list-style: none;
+
+            display: flex;
+
+            gap: 25px;
+
         }
 
 
-        .skill li {
+        nav ul a {
 
-            padding: 9px 0;
+            color:
+                #cbd5e1;
+
+            font-size: 15px;
+
+            transition:
+                0.3s;
+
+        }
+
+
+        nav ul a:hover {
+
+            color:
+                white;
+
+        }
+
+
+        /* =================================
+           HERO
+        ================================= */
+
+        #home {
+
+            min-height:
+                90vh;
+
+            background:
+
+                linear-gradient(
+                    135deg,
+                    #0f172a,
+                    #1e1b4b
+                );
+
+            color:
+                white;
+
+            display: flex;
+
+            align-items: center;
+
+        }
+
+
+        .hero {
+
+            max-width:
+                1150px;
+
+            width: 100%;
+
+            margin: auto;
+
+            padding:
+                70px 20px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content:
+                space-between;
+
+            gap: 50px;
+
+        }
+
+
+        .hero-text {
+
+            flex: 1;
+
+        }
+
+
+        .hero-text h1 {
+
+            font-size:
+                clamp(40px, 7vw, 70px);
+
+            line-height:
+                1.1;
+
+            margin-bottom:
+                15px;
+
+        }
+
+
+        .hero-text h1 span {
+
+            color:
+                #60a5fa;
+
+        }
+
+
+        .hero-text h2 {
+
+            color:
+                #c4b5fd;
+
+            margin-bottom:
+                20px;
+
+            font-size:
+                25px;
+
+        }
+
+
+        .hero-text p {
+
+            max-width:
+                650px;
+
+            color:
+                #cbd5e1;
+
+            font-size:
+                18px;
+
+            margin-bottom:
+                30px;
+
+        }
+
+
+        /* =================================
+           PROFILE IMAGE
+        ================================= */
+
+        .profile-container {
+
+            flex-shrink: 0;
+
+        }
+
+
+        .profile-image {
+
+            width:
+                260px;
+
+            height:
+                260px;
+
+            object-fit:
+                cover;
+
+            border-radius:
+                50%;
+
+            border:
+                6px solid #60a5fa;
+
+            box-shadow:
+
+                0 0 0 10px
+                rgba(96,165,250,0.15),
+
+                0 20px 60px
+                rgba(0,0,0,0.4);
+
+        }
+
+
+        /* =================================
+           BUTTONS
+        ================================= */
+
+        .buttons {
+
+            display:
+                flex;
+
+            gap:
+                15px;
+
+            flex-wrap:
+                wrap;
+
+        }
+
+
+        .button {
+
+            display:
+                inline-block;
+
+            padding:
+                13px 24px;
+
+            border-radius:
+                8px;
+
+            font-weight:
+                bold;
+
+            transition:
+                0.3s;
+
+        }
+
+
+        .primary-button {
+
+            background:
+                var(--primary);
+
+            color:
+                white;
+
+        }
+
+
+        .primary-button:hover {
+
+            background:
+                #1d4ed8;
+
+            transform:
+                translateY(-2px);
+
+        }
+
+
+        .secondary-button {
+
+            border:
+                1px solid #64748b;
+
+            color:
+                white;
+
+        }
+
+
+        .secondary-button:hover {
+
+            background:
+                rgba(255,255,255,0.1);
+
+        }
+
+
+        /* =================================
+           SOCIAL MEDIA
+        ================================= */
+
+        .socials {
+
+            display:
+                flex;
+
+            gap:
+                12px;
+
+            margin-top:
+                30px;
+
+            flex-wrap:
+                wrap;
+
+        }
+
+
+        .social {
+
+            width:
+                42px;
+
+            height:
+                42px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            border-radius:
+                50%;
+
+            background:
+                rgba(255,255,255,0.1);
+
+            color:
+                white;
+
+            font-size:
+                14px;
+
+            font-weight:
+                bold;
+
+            transition:
+                0.3s;
+
+        }
+
+
+        .social:hover {
+
+            background:
+                var(--primary);
+
+            transform:
+                translateY(-4px);
+
+        }
+
+
+        /* =================================
+           GENERAL SECTIONS
+        ================================= */
+
+        section {
+
+            padding:
+                90px 20px;
+
+        }
+
+
+        .section-container {
+
+            max-width:
+                1150px;
+
+            margin:
+                auto;
+
+        }
+
+
+        .section-title {
+
+            text-align:
+                center;
+
+            margin-bottom:
+                50px;
+
+        }
+
+
+        .section-title h2 {
+
+            font-size:
+                38px;
+
+            color:
+                var(--dark);
+
+            margin-bottom:
+                10px;
+
+        }
+
+
+        .section-title p {
+
+            color:
+                var(--muted);
+
+        }
+
+
+        /* =================================
+           ABOUT
+        ================================= */
+
+        .about {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap:
+                50px;
+
+            align-items:
+                center;
+
+        }
+
+
+        .about-text p {
+
+            margin-bottom:
+                15px;
+
+        }
+
+
+        .about-box {
+
+            background:
+                white;
+
+            padding:
+                30px;
+
+            border-radius:
+                15px;
+
+            border:
+                1px solid var(--border);
+
+        }
+
+
+        .about-box h3 {
+
+            color:
+                var(--dark);
+
+            margin-bottom:
+                15px;
+
+        }
+
+
+        .about-box ul {
+
+            list-style:
+                none;
+
+        }
+
+
+        .about-box li {
+
+            padding:
+                8px 0;
 
             border-bottom:
-                1px solid #eee;
+                1px solid var(--border);
+
         }
 
 
-        /* =========================
-           PROJECTS
-        ========================= */
+        /* =================================
+           SKILLS
+        ================================= */
 
-        .projects-container {
+        .skills-container {
 
-            display: grid;
+            display:
+                grid;
 
             grid-template-columns:
                 repeat(3, 1fr);
 
-            gap: 25px;
+            gap:
+                25px;
+
+        }
+
+
+        .skill-card {
+
+            background:
+                white;
+
+            padding:
+                30px;
+
+            border-radius:
+                15px;
+
+            border:
+                1px solid var(--border);
+
+            transition:
+                0.3s;
+
+        }
+
+
+        .skill-card:hover {
+
+            transform:
+                translateY(-7px);
+
+            box-shadow:
+                0 15px 35px
+                rgba(0,0,0,0.08);
+
+        }
+
+
+        .skill-card h3 {
+
+            margin-bottom:
+                20px;
+
+            color:
+                var(--dark);
+
+        }
+
+
+        .skill-card ul {
+
+            list-style:
+                none;
+
+        }
+
+
+        .skill-card li {
+
+            padding:
+                9px 0;
+
+            border-bottom:
+                1px solid var(--border);
+
+        }
+
+
+        .skilled h3 {
+
+            color:
+                var(--success);
+
+        }
+
+
+        .progress h3 {
+
+            color:
+                var(--primary);
+
+        }
+
+
+        .roadmap h3 {
+
+            color:
+                var(--secondary);
+
+        }
+
+
+        /* =================================
+           PROJECTS
+        ================================= */
+
+        .projects {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap:
+                25px;
+
         }
 
 
         .project {
 
-            background: white;
+            background:
+                white;
 
-            padding: 25px;
+            border:
+                1px solid var(--border);
 
-            border-radius: 12px;
+            border-radius:
+                15px;
 
-            box-shadow:
-                0 3px 12px rgba(0,0,0,0.08);
+            padding:
+                30px;
 
-            transition: 0.3s;
+            transition:
+                0.3s;
+
         }
 
 
         .project:hover {
 
-            transform: translateY(-5px);
+            transform:
+                translateY(-7px);
+
+            box-shadow:
+                0 15px 35px
+                rgba(0,0,0,0.08);
+
         }
 
 
         .project h3 {
 
-            margin-bottom: 12px;
+            color:
+                var(--dark);
+
+            margin-bottom:
+                12px;
+
         }
 
 
         .project p {
 
-            margin-bottom: 15px;
+            margin-bottom:
+                15px;
+
+            color:
+                var(--muted);
+
         }
 
 
-        .project a {
+        .project-link {
 
-            color: #0066cc;
+            color:
+                var(--primary);
 
-            text-decoration: none;
+            font-weight:
+                bold;
 
-            font-weight: bold;
         }
 
 
-        /* =========================
+        /* =================================
            CONTACT
-        ========================= */
+        ================================= */
 
         #contact {
 
-            text-align: center;
+            background:
+                var(--dark);
+
+            color:
+                white;
+
         }
 
 
-        #contact p {
+        #contact .section-title h2 {
 
-            margin: 10px;
+            color:
+                white;
+
         }
 
 
-        #contact a {
+        #contact .section-title p {
 
-            color: #0066cc;
+            color:
+                #94a3b8;
+
         }
 
 
-        /* =========================
+        .contact-socials {
+
+            display:
+                flex;
+
+            justify-content:
+                center;
+
+            flex-wrap:
+                wrap;
+
+            gap:
+                15px;
+
+            margin-top:
+                30px;
+
+        }
+
+
+        .contact-link {
+
+            color:
+                white;
+
+            padding:
+                10px 18px;
+
+            border:
+                1px solid #334155;
+
+            border-radius:
+                8px;
+
+            transition:
+                0.3s;
+
+        }
+
+
+        .contact-link:hover {
+
+            background:
+                var(--primary);
+
+            border-color:
+                var(--primary);
+
+        }
+
+
+        /* =================================
            FOOTER
-        ========================= */
+        ================================= */
 
         footer {
 
-            background: #111;
+            background:
+                #020617;
 
-            color: white;
+            color:
+                #64748b;
 
-            text-align: center;
+            text-align:
+                center;
 
-            padding: 30px;
+            padding:
+                25px;
+
         }
 
 
-        /* =========================
+        /* =================================
            MOBILE
-        ========================= */
+        ================================= */
 
-        @media (max-width: 800px) {
+        @media (max-width: 850px) {
 
             nav {
 
-                flex-direction: column;
+                flex-direction:
+                    column;
 
-                gap: 15px;
+                gap:
+                    15px;
+
             }
 
 
             nav ul {
 
-                flex-wrap: wrap;
+                flex-wrap:
+                    wrap;
 
-                justify-content: center;
+                justify-content:
+                    center;
+
             }
 
 
-            #home h1 {
+            .hero {
 
-                font-size: 40px;
+                flex-direction:
+                    column-reverse;
+
+                text-align:
+                    center;
+
             }
 
 
-            #home h2 {
+            .hero-text p {
 
-                font-size: 22px;
+                margin-left:
+                    auto;
+
+                margin-right:
+                    auto;
+
+            }
+
+
+            .buttons {
+
+                justify-content:
+                    center;
+
+            }
+
+
+            .socials {
+
+                justify-content:
+                    center;
+
+            }
+
+
+            .about {
+
+                grid-template-columns:
+                    1fr;
+
             }
 
 
             .skills-container {
 
-                grid-template-columns: 1fr;
+                grid-template-columns:
+                    1fr;
+
             }
 
 
-            .projects-container {
+            .projects {
 
-                grid-template-columns: 1fr;
+                grid-template-columns:
+                    1fr;
+
             }
 
         }
+
 
     </style>
 
@@ -391,17 +986,22 @@
 <body>
 
 
-    <!-- =========================
+    <!-- =================================
          NAVIGATION
-    ========================= -->
+    ================================= -->
 
     <header>
 
         <nav>
 
-            <h2>
-                George Mwangi
-            </h2>
+            <a
+                href="#home"
+                class="logo"
+            >
+
+                George<span>.</span>
+
+            </a>
 
 
             <ul>
@@ -412,13 +1012,11 @@
                     </a>
                 </li>
 
-
                 <li>
                     <a href="#about">
                         About
                     </a>
                 </li>
-
 
                 <li>
                     <a href="#skills">
@@ -426,13 +1024,11 @@
                     </a>
                 </li>
 
-
                 <li>
                     <a href="#projects">
                         Projects
                     </a>
                 </li>
-
 
                 <li>
                     <a href="#contact">
@@ -448,116 +1044,300 @@
 
 
 
-    <!-- =========================
-         MAIN
-    ========================= -->
+    <!-- =================================
+         HERO
+    ================================= -->
 
-    <main>
+    <section id="home">
 
-
-        <!-- =========================
-             HOME
-        ========================= -->
-
-        <section id="home">
-
-            <h1>
-                Hi, I'm George Mwangi
-            </h1>
+        <div class="hero">
 
 
-            <h2>
-                Python Developer | Automation | AI
-            </h2>
+            <div class="hero-text">
+
+                <h1>
+
+                    Hi, I'm
+                    <span>
+                        George Mwangi
+                    </span>
+
+                </h1>
 
 
-            <p>
+                <h2>
 
-                I build practical software using Python
-                and explore automation, web technologies,
-                artificial intelligence and data-driven
-                applications.
+                    Python Developer |
+                    Automation | AI
 
-            </p>
+                </h2>
 
 
-            <div>
+                <p>
 
-                <a
-                    class="button"
-                    href="#projects"
-                >
+                    I build practical software using
+                    Python and explore automation,
+                    web technologies, artificial
+                    intelligence and data-driven
+                    applications.
 
-                    View My Projects
+                </p>
 
-                </a>
+
+                <div class="buttons">
+
+                    <a
+                        href="#projects"
+                        class="button primary-button"
+                    >
+
+                        View My Projects
+
+                    </a>
+
+
+                    <a
+                        href="#contact"
+                        class="button secondary-button"
+                    >
+
+                        Contact Me
+
+                    </a>
+
+                </div>
+
+
+                <!-- SOCIAL MEDIA -->
+
+                <div class="socials">
+
+
+                    <a
+                        class="social"
+                        href="https://github.com/YOUR_USERNAME"
+                        target="_blank"
+                        title="GitHub"
+                    >
+
+                        GH
+
+                    </a>
+
+
+                    <a
+                        class="social"
+                        href="https://www.linkedin.com/in/YOUR_USERNAME"
+                        target="_blank"
+                        title="LinkedIn"
+                    >
+
+                        IN
+
+                    </a>
+
+
+                    <a
+                        class="social"
+                        href="https://x.com/YOUR_USERNAME"
+                        target="_blank"
+                        title="X"
+                    >
+
+                        X
+
+                    </a>
+
+
+                    <a
+                        class="social"
+                        href="https://instagram.com/YOUR_USERNAME"
+                        target="_blank"
+                        title="Instagram"
+                    >
+
+                        IG
+
+                    </a>
+
+
+                    <a
+                        class="social"
+                        href="https://facebook.com/YOUR_USERNAME"
+                        target="_blank"
+                        title="Facebook"
+                    >
+
+                        FB
+
+                    </a>
+
+
+                    <a
+                        class="social"
+                        href="https://wa.me/YOUR_NUMBER"
+                        target="_blank"
+                        title="WhatsApp"
+                    >
+
+                        WA
+
+                    </a>
+
+
+                </div>
 
             </div>
 
-        </section>
+
+
+            <!-- PROFILE -->
+
+            <div class="profile-container">
+
+                <img
+                    src="profile.jpg"
+                    alt="George Mwangi"
+                    class="profile-image"
+                >
+
+            </div>
+
+
+        </div>
+
+    </section>
 
 
 
-        <!-- =========================
-             ABOUT
-        ========================= -->
+    <!-- =================================
+         ABOUT
+    ================================= -->
 
-        <section id="about">
+    <section id="about">
 
-            <h2>
-                About Me
-            </h2>
+        <div class="section-container">
 
 
-            <p>
+            <div class="section-title">
 
-                I'm a Computer Science student developing
-                my skills in Python, automation,
-                web technologies and artificial intelligence.
+                <h2>
+                    About Me
+                </h2>
 
-            </p>
+                <p>
+                    Developer in progress, builder by practice.
+                </p>
 
-
-            <p>
-
-                I enjoy taking real-world problems
-                and turning them into practical
-                software solutions.
-
-            </p>
+            </div>
 
 
-            <p>
-
-                My current focus is Python development,
-                automation and building toward AI and
-                machine learning.
-
-            </p>
-
-        </section>
+            <div class="about">
 
 
+                <div class="about-text">
 
-        <!-- =========================
-             SKILLS
-        ========================= -->
+                    <p>
 
-        <section id="skills">
+                        I'm a Computer Science student
+                        developing my skills in Python,
+                        automation, web technologies
+                        and artificial intelligence.
 
-            <h2>
-                Skills & Roadmap
-            </h2>
+                    </p>
+
+
+                    <p>
+
+                        I enjoy taking real-world
+                        problems and turning them into
+                        practical software solutions.
+
+                    </p>
+
+
+                    <p>
+
+                        My long-term goal is to build
+                        intelligent systems that combine
+                        software, automation and AI.
+
+                    </p>
+
+                </div>
+
+
+                <div class="about-box">
+
+                    <h3>
+                        Current Focus
+                    </h3>
+
+
+                    <ul>
+
+                        <li>
+                            Python Development
+                        </li>
+
+                        <li>
+                            Automation
+                        </li>
+
+                        <li>
+                            Web Applications
+                        </li>
+
+                        <li>
+                            AI & Machine Learning
+                        </li>
+
+                        <li>
+                            Software Projects
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================
+         SKILLS
+    ================================= -->
+
+    <section id="skills">
+
+        <div class="section-container">
+
+
+            <div class="section-title">
+
+                <h2>
+                    Skills & Roadmap
+                </h2>
+
+                <p>
+                    Where I am, what I'm learning,
+                    and where I'm going.
+                </p>
+
+            </div>
 
 
             <div class="skills-container">
 
 
-                <!-- =====================
-                     SKILLED
-                ====================== -->
+                <!-- SKILLED -->
 
-                <div class="skill">
+                <div class="skill-card skilled">
 
                     <h3>
                         ✓ Skilled
@@ -600,11 +1380,9 @@
 
 
 
-                <!-- =====================
-                     IN PROGRESS
-                ====================== -->
+                <!-- IN PROGRESS -->
 
-                <div class="skill">
+                <div class="skill-card progress">
 
                     <h3>
                         ⚙ In Progress
@@ -643,11 +1421,9 @@
 
 
 
-                <!-- =====================
-                     ROADMAP
-                ====================== -->
+                <!-- ROADMAP -->
 
-                <div class="skill">
+                <div class="skill-card roadmap">
 
                     <h3>
                         → Roadmap
@@ -695,25 +1471,36 @@
 
             </div>
 
-        </section>
+        </div>
+
+    </section>
 
 
 
-        <!-- =========================
-             PROJECTS
-        ========================= -->
+    <!-- =================================
+         PROJECTS
+    ================================= -->
 
-        <section id="projects">
+    <section id="projects">
 
-            <h2>
-                Projects
-            </h2>
+        <div class="section-container">
 
 
-            <div class="projects-container">
+            <div class="section-title">
+
+                <h2>
+                    Projects
+                </h2>
+
+                <p>
+                    Things I've built and things I'm building.
+                </p>
+
+            </div>
 
 
-                <!-- PROJECT 1 -->
+            <div class="projects">
+
 
                 <div class="project">
 
@@ -724,10 +1511,9 @@
 
                     <p>
 
-                        A Python application for managing
-                        student records, including adding,
+                        A Python application for adding,
                         searching, updating and deleting
-                        students.
+                        student records.
 
                     </p>
 
@@ -735,15 +1521,16 @@
                     <p>
 
                         <strong>
-                            Technology:
+                            Python
                         </strong>
-
-                        Python
 
                     </p>
 
 
-                    <a href="#">
+                    <a
+                        href="#"
+                        class="project-link"
+                    >
 
                         View Project →
 
@@ -752,8 +1539,6 @@
                 </div>
 
 
-
-                <!-- PROJECT 2 -->
 
                 <div class="project">
 
@@ -764,8 +1549,8 @@
 
                     <p>
 
-                        A web application for registering
-                        users and authenticating them.
+                        A web application for user
+                        registration and authentication.
 
                     </p>
 
@@ -773,15 +1558,16 @@
                     <p>
 
                         <strong>
-                            Technologies:
+                            Python · Flask · HTML · SQLite
                         </strong>
-
-                        Python, Flask, HTML, SQLite
 
                     </p>
 
 
-                    <a href="#">
+                    <a
+                        href="#"
+                        class="project-link"
+                    >
 
                         View Project →
 
@@ -790,8 +1576,6 @@
                 </div>
 
 
-
-                <!-- PROJECT 3 -->
 
                 <div class="project">
 
@@ -802,8 +1586,8 @@
 
                     <p>
 
-                        A Python automation project designed
-                        to reduce repetitive computer tasks.
+                        A Python project designed to
+                        automate repetitive tasks.
 
                     </p>
 
@@ -811,15 +1595,16 @@
                     <p>
 
                         <strong>
-                            Technology:
+                            Python · Selenium
                         </strong>
-
-                        Python, Selenium
 
                     </p>
 
 
-                    <a href="#">
+                    <a
+                        href="#"
+                        class="project-link"
+                    >
 
                         View Project →
 
@@ -830,75 +1615,135 @@
 
             </div>
 
-        </section>
+        </div>
+
+    </section>
 
 
 
-        <!-- =========================
-             CONTACT
-        ========================= -->
+    <!-- =================================
+         CONTACT
+    ================================= -->
 
-        <section id="contact">
+    <section id="contact">
 
-            <h2>
-                Contact Me
-            </h2>
+        <div class="section-container">
 
 
-            <p>
+            <div class="section-title">
 
-                Interested in working together
-                or discussing a project?
+                <h2>
+                    Let's Connect
+                </h2>
 
-            </p>
+
+                <p>
+
+                    Find me on these platforms
+                    or send me a message.
+
+                </p>
+
+            </div>
 
 
-            <p>
+            <div class="contact-socials">
 
-                Email:
 
                 <a
+                    class="contact-link"
+                    href="https://github.com/YOUR_USERNAME"
+                    target="_blank"
+                >
+
+                    GitHub
+
+                </a>
+
+
+                <a
+                    class="contact-link"
+                    href="https://www.linkedin.com/in/YOUR_USERNAME"
+                    target="_blank"
+                >
+
+                    LinkedIn
+
+                </a>
+
+
+                <a
+                    class="contact-link"
+                    href="https://x.com/YOUR_USERNAME"
+                    target="_blank"
+                >
+
+                    X / Twitter
+
+                </a>
+
+
+                <a
+                    class="contact-link"
+                    href="https://instagram.com/YOUR_USERNAME"
+                    target="_blank"
+                >
+
+                    Instagram
+
+                </a>
+
+
+                <a
+                    class="contact-link"
+                    href="https://facebook.com/YOUR_USERNAME"
+                    target="_blank"
+                >
+
+                    Facebook
+
+                </a>
+
+
+                <a
+                    class="contact-link"
+                    href="https://wa.me/YOUR_NUMBER"
+                    target="_blank"
+                >
+
+                    WhatsApp
+
+                </a>
+
+
+                <a
+                    class="contact-link"
                     href="mailto:YOUR_EMAIL@example.com"
                 >
 
-                    YOUR_EMAIL@example.com
+                    Email
 
                 </a>
 
-            </p>
 
+            </div>
 
-            <p>
+        </div>
 
-                GitHub:
-
-                <a
-                    href="https://github.com/YOUR_USERNAME"
-                >
-
-                    GitHub Profile
-
-                </a>
-
-            </p>
-
-        </section>
-
-
-    </main>
+    </section>
 
 
 
-    <!-- =========================
+    <!-- =================================
          FOOTER
-    ========================= -->
+    ================================= -->
 
     <footer>
 
         <p>
 
             © 2026 George Mwangi.
-            All rights reserved.
+            Built with HTML & CSS.
 
         </p>
 
@@ -907,4 +1752,4 @@
 
 </body>
 
-  </html>
+    </html>
